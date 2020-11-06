@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contoh Video HTML</title>
+    <style>
+        body{
+            background-image: url('background video.jfif');
+		    background-size: cover;
+        }
+        h1{
+            font-style: oblique;
+            color: blanchedalmond;
+        }
+        .frame h1{
+            font-style: oblique;
+            color: blanchedalmond;
+            text-align: center;
+        }
+        .content{
+            margin-left: 350px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <h1 align="center">Contoh Video HTML</h1>
+        <div class="content">
+            <video controls>
+                <source src="video.mp4" type="video/mp4"/>
+                <track src="subtitle.vtt" kind="subtitles"label="Indonesia"/>
+            </video>
+        </div>
+    </div>
+</body>
+</html>

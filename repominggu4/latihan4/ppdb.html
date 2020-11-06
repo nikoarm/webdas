@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="widht-device-width, initial-scale-1">
+        <title>FORMULIR PPDB</title>
+    </head>
+    <style type="text/css">
+        body {
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+            background-color: lightblue;
+        }
+        .container {
+            width: 730px;
+            margin: 0 auto;
+            color: black;
+        }
+
+        #header {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        #header h1 {
+            color: black;
+            text-shadow: 1px 1px 0px #333333, 2px 2px 0px #666666;
+        }
+        .form-container {
+            background:white;
+            padding: 20px;
+            border: 1px solid #aaaaaa;
+            position: relative;
+            box-shadow: 0 0 3px rgba(0,0,0,0,2);
+            border-radius: 3px;
+            margin-bottom: 30;
+        }
+        .form-container:after, .form-container:before{
+            background: #fbfbfb;
+            border: 1px solid #aaaaaa;
+            bottom: -8px;
+            position: absolute;
+            left: 4px;
+            content: "";
+            height: 100%;
+            width: 100%;
+            z-index: -10;
+            box-shadow: 0 0 3prgba(0,0,0,0,2);
+            border-radius: 3px;
+        }
+        fieldset{
+            border: 3px solid #bbbb;
+            border-radius: 3px;
+            margin-bottom: 30px;
+        }
+        legend{
+            padding-right: 20px;
+            padding-left: 20px;
+            font-weight: 900;
+            color: #bbbb;
+            margin-bottom: 20px;
+        }
+        .form-grup{
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+        .form-grup:after, .form-grup::before{
+            display: table;
+            content: "";
+        }
+        .form-grup:after{
+            clear: both;
+        }
+        .label{
+            float: left;
+            width: 30%;
+            border: 0;
+            font-weight: 900;
+            color: #777777;
+            font-size: 12px;
+        }
+        .label label{
+            display: inline-block;
+            vertical-align: -webkit-baseline-middle;
+        }
+        .input {
+            margin-top: 10px;
+            float: left;
+            width: 70%;
+            border: 0;
+        }
+        input[type=text], select, input[type=email], input[type=url], input[type=date]
+            textarea {
+            border: 2px solid #bbbbbb;
+            padding: 8px;
+            border-radius: 3px;
+            background-size: #ffffff;
+            width: 100%;
+            font-family: inherit;
+        }
+        input[type=text]:focus, select:focus, input[type=email]:focus, input[type=url]:focus, input[type=date]:focus,
+            textarea:focus {
+            border: 2px solid cadetblue;
+        }
+        select{
+            width: inherit;
+        }
+        input[type=file]{
+            display: none;
+        }
+        .upload-foto{
+            border: 1px solid #cccccc;
+            display: inline-block;
+            padding: 80px 60px;
+            cursor: pointer;
+        }
+        .tools {
+            width: 100%;
+            background: khaki;
+            border: 2px solid steelblue;
+            color: black;
+            padding: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 12px 0;
+
+        }
+        footer{
+            background: #fbfbfb;
+            padding: 10px;
+            font-weight: bold;
+            color: #999999;
+            text-align: center;
+        }
+        @media (max-width: 480px;){
+            .container{
+                width: 100%;
+            }
+            .label{
+                float: none;
+                width: 100;
+            }
+            .input{
+                float: none;
+                width: 100;
+            }
+        }
+        @media (min-width: 480px;) and (max-width: 768px);{
+            .container{
+                width: 100%;
+            }
+        }
+    </style>
+    <body background="bck.jpg">
+        <div class="container">
+            <div class="form-container">
+            <form action="action.php" method="POST" autocomplate="on" id="form1">
+                <div id="header">
+                    <h1>Formulir Pendaftaran</h1>
+                    <p>Silahkan Isi Formulir Secara Lengkap</p>
+                </div>
+                
+                <fieldset>
+                    <legend>Info Pendaftaran</legend>
+                    <div class="form-grup">
+                        <div class="label">
+                            <label>NISN</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="NISN" placeholder="Isikan NISN Anda..." autofocus/>
+                        </div>
+                    <div class="form-grup">
+                        <div class="label">
+                            <label>Asal Sekolah</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="Asal_Sekolah" placeholder="Asal Sekolah Anda..." autofocus />
+                         </div>
+                    <div class="form-grup">
+                        <div class="label">
+                            <label>Tahun Lulus</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="Tahun_Lulus" placeholder="Tahun Lulus Anda..." autofocus/>
+                        </div>
+                    </div>
+                </fieldest>
+
+                <fieldset>    
+                    <legend>DATA CALON PESERTA</legend>
+                    <div class="form-grup">
+                        <div class="label">
+                            <label>Nama Lengkap</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="Nama_Lengkpa" placeholder="Nama Lengkap..." maxlength="30" autofocus />
+                        </div>
+                        <div class="label">
+                            <label>NIK</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="NIK" autofocus />
+                        </div>
+                        <div class="label">
+                            <label>Tempat/</label>
+                            <label>Tanggal Lahir</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="Tempat" />
+                            <input type="date" name="tgl_lahir" />
+                        </div>
+                        <div class="label">
+                            <label>Upload Akte Kelahiran</label>
+                        </div>
+                        <div class="input">
+                            <label for="file-upload" class="upload-foto">Upload Foto</label>
+                            <input id="file-upload" type="file" name="upload foto" autofocus />
+                        </div>  
+                        <div class="label">
+                            <label>Jenis Kelamin</label>
+                        </div>
+                        <div class="input">
+                            <select name="Jenis_Kelamin">
+                                <option value="L">Laki-laki</option>
+                                <option value="P">Perempuan</option>
+                            </select>
+                        </div> 
+                        <div class="label">
+                            <label>Alamat</label>
+                        </div>
+                        <div class="input">
+                            <textarea name="alamat" placeholder="Masukkan Alamat Lengkap"></textarea>
+                        </div> 
+                        <div class="label">
+                            <label>Email</label>
+                        </div>
+                        <div class="input">
+                            <input type="email" name="Email" placeholder="mis. email@gmail.com" autocomplete="off" />
+                        </div> 
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>DATA ORANG TUA</legend>
+                    <div class="form-grup">
+                        <div class="label">
+                            <label>Nomor Kartu Keluarga</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="NKK" />
+                        </div>
+                        <div class="label">
+                            <label>Upload Kartu Keluarga</label>
+                        </div>
+                        <div class="input">
+                            <label for="file-upload" class="upload-foto">Upload Foto Kartu Keluarga</label>
+                            <input id="file-upload" type="file" name="upload foto" autofocus />
+                        </div>
+                        <div class="label">
+                            <label>Nama Ayah Kandung</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="nama" />
+                        </div>
+                        <div class="label">
+                            <label>Agama</label>
+                        </div>
+                        <div class="input">
+                            <select name="Agama">
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Katolik">Katolik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Budha">Budha</option>
+                            </select>
+                        </div>
+                        <div class="label">
+                            <label>Pekerjaan</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="pekerjaan" />
+                        </div>
+                        <div class="label">
+                            <label>Nama Ibu Kandung</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="nama" />
+                        </div>
+                        <div class="label">
+                            <label>Agama</label>
+                        </div>
+                        <div class="input">
+                            <select name="Agama">
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Katolik">Katolik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Budha">Budha</option>
+                            </select>
+                        </div>
+                        <div class="label">
+                            <label>Pekerjaan</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="pekerjaan" />
+                        </div>
+                        <div class="label">
+                            <label>Alamat Orang Tua</label>
+                        </div>
+                        <div class="input">
+                            <textarea name="alamat" placeholder="Masukkan Alamat Lengkap"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form">
+                    <input class="tools" type="submit" name="Signin-button" value="Masuk">
+                </div>
+
+                <div class="form-grup">
+                    <hr>
+                    <input type="checkbox" name="subcribe" value="1" form="form1" /> Subcribe notifikasi ke email Anda 
+                    (jika tidak, silahkan kosong) <br>
+                    <input type="checkbox" name="subcribe" value="2" form="form1" /> Subcribe postingan dari website
+                </div>
+
+            </form>
+            </div>
+        </div>
+        <footer>
+            <p>Selamat Datang di Penerimaan Peserta Didik Baru</p>
+        </footer>
+    </body>
+</html>

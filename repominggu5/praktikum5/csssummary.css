@@ -1,0 +1,27 @@
+.body {
+    padding: 2em;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+summary {
+    padding: 1em;
+    background-color: royalblue;
+    margin-bottom: 1em;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3em;
+    font-weight: bold;
+    transition: background-color .3s;
+    width: 200px;
+
+    &:hover{
+        background: rgb(255,224,52);
+    }
+}
+
+details[open] ~ *{
+    animation:sweep .5s ease-in-out;
+}
+@keyframes sweep{}

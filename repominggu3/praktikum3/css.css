@@ -1,0 +1,49 @@
+body{
+    margin: 20px;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.menu{
+    background-color: rgb(0,119,255);
+    padding: 5px;
+}
+.menu ul li{
+    display: inline;
+    margin: 30px;
+}
+.menu ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: rgb(235,232,232);
+    border-bottom: 2px solid white;
+}
+.gambar img{
+    width: 800px;
+    height: 400px;
+    margin-top: 10px;
+    border-bottom: 4px solid rgb(0,119,255);
+    border-top: 4px solid salmon;
+    margin-left: 200px;
+
+}
+.konten{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+.konten h2{
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+    }
+.konten p{
+    color: rgb(54, 54, 54);
+}
+table{
+    width: 300px;
+    background-color: khaki;
+}
